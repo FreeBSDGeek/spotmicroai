@@ -65,7 +65,8 @@ while True:
     while True:
 
         try:
-            user_input = input("Write the angle and press Enter, or press Enter for 90: ")
+            print("Write the angle and press Enter, or press Enter for 90: ", end='')
+            user_input = sys.stdin.readline().strip()
 
             pca = PCA9685(i2c, address=int(PCA9685_ADDRESS, 0), reference_clock_speed=PCA9685_REFERENCE_CLOCK_SPEED)
             pca.frequency = PCA9685_FREQUENCY
