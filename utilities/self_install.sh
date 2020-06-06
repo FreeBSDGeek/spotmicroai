@@ -13,6 +13,7 @@ cat /etc/modprobe.d/bluetooth.conf
 
 cd ~ || exit
 git clone https://github.com/FreeBSDGeek/spotmicro.git spotmicroai
+git checkout development
 cd spotmicroai || exit
 
 find . -type f -iname "*.sh" -exec chmod +x {} \;
