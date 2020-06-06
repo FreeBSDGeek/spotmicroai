@@ -12,7 +12,7 @@ grep -qxF 'options bluetooth disable_ertm=Y' /etc/modprobe.d/bluetooth.conf || e
 cat /etc/modprobe.d/bluetooth.conf
 
 cd ~ || exit
-git clone https://gitlab.com/custom_robots/spotmicroai/basic-runtime.git spotmicroai
+git clone https://github.com/FreeBSDGeek/spotmicro.git spotmicroai
 cd spotmicroai || exit
 
 find . -type f -iname "*.sh" -exec chmod +x {} \;
