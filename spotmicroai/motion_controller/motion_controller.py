@@ -15,6 +15,9 @@ from spotmicroai.utilities.general import General
 
 log = Logger().setup_logger('Motion controller')
 
+class MyServo:
+
+
 
 class MotionController:
     boards = 1
@@ -737,7 +740,7 @@ class MotionController:
         self.servo_front_shoulder_left.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_LEFT_REST_ANGLE) - 10
         self.servo_front_shoulder_right.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_SHOULDER_RIGHT_REST_ANGLE) + 10
 
-        sleep(0.2)
+        time.sleep(0.2)
 
         self.servo_rear_leg_left.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_LEFT_REST_ANGLE) - variation_leg
         self.servo_rear_feet_left.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_LEFT_REST_ANGLE) + variation_feet
@@ -745,7 +748,7 @@ class MotionController:
         self.servo_rear_leg_righ.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_LEG_RIGHT_REST_ANGLE) + variation_leg
         self.servo_rear_feet_right_.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_REAR_FEET_RIGHT_REST_ANGLE) - variation_feet
 
-        sleep(0.2)
+        time.sleep(0.2)
 
         self.servo_front_leg_left.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_LEG_LEFT_REST_ANGLE) - variation_leg + 5
         self.servo_front_feet_left.angle = Config().get(Config.MOTION_CONTROLLER_SERVOS_FRONT_FEET_LEFT_REST_ANGLE) + variation_feet - 5
