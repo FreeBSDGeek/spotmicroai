@@ -15,9 +15,6 @@ from spotmicroai.utilities.general import General
 
 log = Logger().setup_logger('Motion controller')
 
-class MyServo:
-
-
 
 class MotionController:
     boards = 1
