@@ -65,7 +65,7 @@ class MyServo:
     def newangle(self):
         return self._newangle
 
-    @new_angle.setter
+    @newangle.setter
     def newangle(self,a):
         self._newangle = a
 
